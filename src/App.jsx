@@ -19,9 +19,9 @@ const App = () => {
       <Routes>
         <Route element={<SharedLayer />}>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/checkout" element={<CheckOut />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/register" element={<Register />}></Route>
+          <Route path="checkout" element={<CheckOut />}></Route>
+          <Route path="login" element={<Login />}></Route>
+          <Route path="register" element={<Register />}></Route>
           <Route path="products/:id" element={<ProductPage />}></Route>
         </Route>
         <Route path="adminlogin" element={<AdminLogin />}></Route>

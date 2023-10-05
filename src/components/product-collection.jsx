@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { collection } from "../data";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../features/cart/cartSlice";
 import Product from "./Product";
 
 const HomeProducts = () => {
+  const { cartItems } = useSelector((state) => state.cart);
   const [products, setProducts] = useState(collection);
   const dispatch = useDispatch();
 
@@ -15,7 +16,6 @@ const HomeProducts = () => {
         return product.id === itemId
           ? { ...product, hasLiked: !product.hasLiked }
           : product;
-        const { cartItems } = useSelector((state) => state.cart);
       });
     });
   };
