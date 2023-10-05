@@ -52,9 +52,9 @@ header.sticking {
   background-color: #fff;
   color: #000;
 
-  & .link {
+  /* & .link {
     color: #000;
-  }
+  } */
 
   & .header-items .icon {
     color: #000;

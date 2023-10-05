@@ -1,20 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { data, collection } from "../../data";
 
-function getState() {
-  if (localStorage.getItem("cart") == null) {
-    return localStorage.getItem("cart");
-  }
-  return {
-    cartItems: [],
-    amount: 0,
-    total: 0,
-    isOpen: false,
-    isLoading: true,
-  };
-}
-
-const initialState = getState();
+const initialState = {
+  cartItems: [],
+  amount: 0,
+  total: 0,
+  isOpen: false,
+  isLoading: true,
+};
 
 const cartSlice = createSlice({
   name: "cart",
